@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: vh;
+  background-color: #f8f8f8;
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  background-color: rgb(56, 5, 76);
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: none;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+  margin-right: 20px;
+  font-weight: 540;
+}
+
+.logo {
+  height: 64px;
+   animation-name:spin ;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+  }
+
+@keyframes spin{
+ 0%{
+  transform: rotate3d(0, 1, 0, 0deg);
+ }
+ 50%{
+  transform: rotate3d(0, 1, 0, 180deg);
+ }
+ 100%{
+  transform:rotate3d(0, 1, 0, 360deg);
+ }
+} 
+   
+
+
+
+
+
+
+
+
+.hero {
+  width: 100%;
+  height: auto;
+  background: url(img/foodall.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  color: white;
+  text-align: center;
+  padding: 100px;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.search-box {
+  max-width: 550px;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box input {
+  width: 70%;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  border-radius: 5px 0 5px 0px;
+  font-size: 1rem;
+  border: 1px solid red;
+}
+
+.search-box button {
+  padding: 10px 12px;
+  outline: none;
+  border: 0;
+  border-radius: 5px 0 5px 0px;
+  font-size: 1rem;
+  background: rgb(255, 0, 0);
+  color: white;
+  cursor: pointer;
+}
+
+/* Receip section */
+
+.recipes {
+  padding: 50px 0;
+}
+
+.recipes h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+.recipe-section {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 10px;
+}
+
+.recipe-card {
+  background-color: white;
+  margin: 30px 10px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-card h2 {
+  font-size: 22px;
+  padding: 20px;
+}
+
+.recipe-card p {
+  font-size: 18px;
+  padding: 20px;
+}
+
+.recipe-card a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: #333;
+  color: white;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.contact {
+  background: rgb(162, 26, 147);
+  margin: 10px 10px 10px 10px;
+}
+
+.contact h3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.contact a {
+  padding: 175px;
+  margin: 10px;
+  display: grid;
+  display: inline;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+
+.grid {
+  padding: 50px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.grid .video {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 50;
+}
+
+footer {
+  background: #333;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+}
+
+.menu-icon {
+  font-size: 24px;
+  padding: 20px;
+  text-align: right;
+  cursor: pointer;
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+  .nav-list {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero h2 {
+    font-size: 26px;
+  }
+  .hero p {
+    font-size: 15px;
+  }
+}
